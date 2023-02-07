@@ -4,7 +4,7 @@ require('./database');
 //     cors
 // })
 const http = require('http');
-const cors = require('cors')
+const cors = require('cors');
 app.use(cors());
 
 

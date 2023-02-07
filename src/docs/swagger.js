@@ -16,7 +16,7 @@ const swaggerDefinition = {
     },
     servers: [
         {
-            url: "https://02a4-38-25-16-107.sa.ngrok.io/"
+            url: "http://localhost:3000"
         }
     ],
     components: {

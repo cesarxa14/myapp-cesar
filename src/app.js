@@ -12,7 +12,7 @@ app.use('/documentation', swaggerUI.serve, swaggerUI.setup(swaggerSetup));
 app.use(function (req, res, next) {
 
     // Website you wish to allow to connect
-    res.setHeader('Access-Control-Allow-Origin', 'https://myapp-cesar.web.app');
+    res.setHeader('Access-Control-Allow-Origin', '*');
 
     res.setHeader('ngrok-skip-browser-warning', '12345');
 
