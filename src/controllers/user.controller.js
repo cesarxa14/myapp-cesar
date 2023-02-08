@@ -8,6 +8,18 @@ const getUsers = async (req, res) => {
     } 
 }
 
+const getAllOtherUsers = async (req, res) => {
+    try{
+        const {id} = req.params;
+        const users = await User.find({_id: { $nin: id}});
+        res.status(200).json({message: 'Get users', data: users});
+    } catch(err) {
+        console.log('err', err);
+    } 
+}
+
+
+
 const getUser = async (req, res) => {
     try{
         const {id} = req.params;
@@ -46,6 +58,7 @@ const deleteUser = async (req, res) => {
 module.exports.UserController = {
     getUsers,
     getUser,
+    getAllOtherUsers,
     updateUser,
     deleteUser
 }

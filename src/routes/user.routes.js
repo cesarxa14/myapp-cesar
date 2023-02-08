@@ -52,6 +52,8 @@ function UserRoutes(app){
      */
     router.get('/:id' ,UserController.getUser);
 
+    router.get('/getAllOtherUsers/:id' ,UserController.getAllOtherUsers);
+
     /**
      * @openapi
      * /users/{id}:
